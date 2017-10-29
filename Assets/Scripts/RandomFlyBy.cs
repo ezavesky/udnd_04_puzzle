@@ -42,7 +42,7 @@ public class RandomFlyBy : MonoBehaviour {
 		objNew.obj = Instantiate (prefabRandSet [Random.Range (0, prefabRandSet.Length)], objNew.start, Quaternion.identity);
 		objNew.obj.AddComponent<RandomSpinner> ();	//add new random spinner to object
 		RandomSpinner spinner = objNew.obj.GetComponent<RandomSpinner>();
-		spinner.rotateMagnitude = Random.Range (0, 10);
+		spinner.rotateMagnitude = Random.Range (0.5f, 6.0f);
 		objNew.obj.transform.parent = transform;  //add it as a new child of this object
 		float scaleRand = Random.Range (scaleMin, scaleMax);
 		objNew.obj.transform.localScale += new Vector3 (scaleRand, scaleRand, scaleRand);
