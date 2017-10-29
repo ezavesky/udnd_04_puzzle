@@ -141,8 +141,8 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.Udacity.Puzzler
-    Standalone: com.Udacity.Puzzler
+    Android: com.EricZavesky.puzzler
+    Standalone: com.EricZavesky.puzzler
     Tizen: com.Company.ProductName
     iOS: com.Udacity.Puzzler
     tvOS: com.Company.ProductName
@@ -264,9 +264,9 @@ PlayerSettings:
     m_Enabled: 0
     m_Devices: []
   - m_BuildTarget: Standalone
-    m_Enabled: 0
+    m_Enabled: 1
     m_Devices:
-    - Oculus
+    - split
   - m_BuildTarget: Tizen
     m_Enabled: 0
     m_Devices: []
