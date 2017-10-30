@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HudInteraction: MonoBehaviour {
-	public GameObject objHud;
-	public GameObject objDescription;
+	public GameObject objInteractive;
 	public GameObject objReticle;
 
 	public GameObject objButton;
@@ -18,10 +17,13 @@ public class HudInteraction: MonoBehaviour {
 		HideMessage (true);
 	}
 
+	public void DeactivateHUD() {
+		HideMessage (false);
+	}
+
 	public void HideMessage(bool bShow=false) {
-		objHud.SetActive (!bShow);
-		objDescription.SetActive (bShow);
-		objReticle.SetActive (!bShow);
+		objInteractive.SetActive (bShow);
+		//objReticle.SetActive (!bShow);
 	}
 
 }
