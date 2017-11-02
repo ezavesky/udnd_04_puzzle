@@ -6,6 +6,11 @@ public class GameController : MonoBehaviour {
 	public GameObject[] lightsDanger;
 	public GameObject[] lightsNormal;
 
+	public GameObject objDoor;
+	public GameObject[] positionDoor = new GameObject[2];
+	public GameObject objShip;
+	public GameObject[] positionShip;
+
 	//public HudInteraction objHud;
 
 	public float moveSpeed = 1.0f;
@@ -17,8 +22,6 @@ public class GameController : MonoBehaviour {
 	public enum GameState { STATE_INVALID, STATE_STARTUP, STATE_PUZZLE1, STATE_COMPLETE }
 	private GameState gameState = GameState.STATE_INVALID;
 	//private GameState gameAutoProgress = GameState.STATE_INVALID;
-
-	private GameObject[] activatePrevious = null;
 
 	// Use this for initialization
 	void Start () {
@@ -80,9 +83,13 @@ public class GameController : MonoBehaviour {
 		case GameState.STATE_INVALID:
 			return;
 		case GameState.STATE_STARTUP:
+			iTween.CameraFadeAdd(iTween.CameraTexture(Color.white));
+			iTween.CameraFadeFrom(iTween.Hash("amount", 1.0f, "time", 2.0f));
 			objActive = waypointSpawn;
 			waypointFinal.SetActive (false);
 			waypointPuzzle1.SetActive (false);
+			ManipulateShip (false);
+			ManipulateDoor (false);
 			//gameAutoProgress = GameState.STATE_PUZZLE1;
 			//objHud.ActivateHUD ("Welcome to the Puzzle, version 1.");
 			break;
@@ -90,12 +97,14 @@ public class GameController : MonoBehaviour {
 			objActive = waypointPuzzle1;
 			waypointFinal.SetActive (false);
 			waypointSpawn.SetActive (false);
+			ManipulateDoor (true);
 			//objHud.DeactivateHUD ();
 			break;
-		case GameState.STATE_COMPLETE:
+		case GameState.STATE_COMPLETE: 
 			objActive = waypointFinal;
 			waypointPuzzle1.SetActive (false);
 			waypointSpawn.SetActive (false);
+			ManipulateShip (true);
 			break;
 		}
 		Debug.Log ("GameController: Entering new state: " + gameState);
@@ -119,6 +128,61 @@ public class GameController : MonoBehaviour {
 		return gameState;
 	}
 
+	void ManipulateShip(bool activate) {
+		RandomSpinner rs = objShip.GetComponent<RandomSpinner> ();
+		positionShip [1].SetActive (activate);
+		positionShip [0].SetActive (!activate);
+		if (activate) { 
+			rs.ToggleRotate (false);
+			positionShip [1].SetActive (true);
+			iTween.MoveTo (objShip, 
+				iTween.Hash (
+					"position", positionShip [1].transform.position, 
+					"time", 3f, "delay", 2f,
+					"easetype", "easeInExpo"
+				)
+			);
+			for (int i = 2; i < positionShip.Length; i++) {
+				positionShip [i].SetActive (true);
+				iTween.MoveTo (objShip, 
+					iTween.Hash (
+						"position", positionShip [i].transform.position, 
+						"time", 1f, "delay", 3f+i*1f,
+						"easetype", "linear"
+					)
+				);
+			}
+		}
+		else {
+			objShip.transform.position = positionShip [0].transform.position;
+			for (int i = 0; i < positionShip.Length; i++) {
+				positionShip [i].SetActive (false);
+			}
+			rs.ToggleRotate (true);
+		}
+	}
 
+	void ManipulateDoor(bool activate) {
+		positionDoor [1].SetActive (activate);
+		positionDoor [0].SetActive (!activate);
+		if (activate) { 
+			iTween.MoveTo(objDoor, 
+				iTween.Hash(
+					"position", positionDoor[1].transform.position, 
+					"time", 1, "delay", 1.5f,
+					"easetype", "easeInExpo"
+				)
+			);
+		}
+		else {
+			iTween.MoveTo(objDoor, 
+				iTween.Hash(
+					"position", positionDoor[0].transform.position, 
+					"time", 1, 
+					"easetype", "easeOutExpo"
+				)
+			);
+		}
+	}
 
 }
