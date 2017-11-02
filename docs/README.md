@@ -29,7 +29,23 @@ Puzzler is a mobile VR application for new VR users which challenges them to sol
 ![puzzler sketch](puzzler_sketch.jpg)
 
 # User testing
-TBD
+## Initial Usability
+These questions were prompted to the first test subject.  After experimentation and observations, a few insights were produced.
+
+* What do you see?
+* How do you interact with the system?
+* How does the size of objects feel?
+* How does it feel navigating?
+* Do you understand controls?
+
+Suggestions from this session were the following:
+
+* Some grammatical errors in the panel discussions
+* Hide the final success panel until the ship animation is completed
+* Slow movement to the final area
+* Some graphical errors in this testing session
+* Modulate the sounds of the environment (perhaps a little louder)
+* Switch fade transition from white to black
 
 # Final Walkthrough
 TBD

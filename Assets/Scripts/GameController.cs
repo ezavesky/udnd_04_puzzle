@@ -23,6 +23,10 @@ public class GameController : MonoBehaviour {
 	private GameState gameState = GameState.STATE_INVALID;
 	//private GameState gameAutoProgress = GameState.STATE_INVALID;
 
+	private float timeAutoAction = -1f;
+	private GameObject autoDisable = null;
+	private GameObject autoEnable = null;
+
 	// Use this for initialization
 	void Start () {
 		//disable all the waypoints because they contain other objects
@@ -40,6 +44,17 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (timeAutoAction > 0.0f && Time.time>timeAutoAction) {
+			if (autoDisable) {
+				autoDisable.SetActive (false);
+				autoDisable = null;
+			}
+			if (autoEnable) {
+				autoEnable.SetActive (true);
+				autoEnable = null;
+			}
+			timeAutoAction = -1f;
+		}
 		/*
 		if (gameAutoProgress!=GameState.STATE_INVALID) {	//had an 'auto' progress state?
 			if (Input.GetMouseButtonDown (0)) {		//wait for click anywhere
@@ -83,11 +98,12 @@ public class GameController : MonoBehaviour {
 		case GameState.STATE_INVALID:
 			return;
 		case GameState.STATE_STARTUP:
-			iTween.CameraFadeAdd(iTween.CameraTexture(Color.white));
-			iTween.CameraFadeFrom(iTween.Hash("amount", 1.0f, "time", 2.0f));
+			iTween.CameraFadeAdd (iTween.CameraTexture (Color.black));
+			iTween.CameraFadeFrom (iTween.Hash ("amount", 1.0f, "time", 2.0f));
 			objActive = waypointSpawn;
 			waypointFinal.SetActive (false);
 			waypointPuzzle1.SetActive (false);
+			waypointSpawn.SetActive (true);
 			ManipulateShip (false);
 			ManipulateDoor (false);
 			//gameAutoProgress = GameState.STATE_PUZZLE1;
@@ -97,6 +113,7 @@ public class GameController : MonoBehaviour {
 			objActive = waypointPuzzle1;
 			waypointFinal.SetActive (false);
 			waypointSpawn.SetActive (false);
+			waypointPuzzle1.SetActive (true);
 			ManipulateDoor (true);
 			//objHud.DeactivateHUD ();
 			break;
@@ -105,13 +122,14 @@ public class GameController : MonoBehaviour {
 			waypointPuzzle1.SetActive (false);
 			waypointSpawn.SetActive (false);
 			ManipulateShip (true);
+			autoEnable = waypointFinal;
+			timeAutoAction = Time.time + 5f;
 			break;
 		}
 		Debug.Log ("GameController: Entering new state: " + gameState);
 
 		//allow position and rotation to move...
 		if (objActive) {
-			objActive.SetActive (true);
 			// Move the player to the play position.
 			iTween.MoveTo(objPlayer, 
 				iTween.Hash(
