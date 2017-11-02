@@ -40,3 +40,5 @@ A few extra assets were used in the creation of this project.  A best effort att
 * [Equipment for Industrial or Sci-Fi Building](https://www.assetstore.unity3d.com/en/#!/content/82846)
 * [Space Asteroids](https://www.assetstore.unity3d.com/en/#!/content/96444)
 * [iTween](https://www.assetstore.unity3d.com/en/#!/content/84)
+* [various audio samples](http://soundbible.com/tags-space.html)
+* various ambient audio tracks - [game start](https://soundcloud.com/astropilot/space-ambient-demo-00), [within puzzle](https://soundcloud.com/time-space/alteredreality-demo2), [puzzle solution](https://soundcloud.com/brillbilly/lost-in-space-ambient)
