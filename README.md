@@ -20,7 +20,8 @@ Quick description of contents within this repo.
 TBD
 
 ### Comments
-TBD
+Struggles:
+* Initializing a GVR scene was solved with [forum help](https://discussions.udacity.com/t/reticle-is-not-showing/203621/27)
 
 ## Requirements
 Software and build environment requirements.
@@ -38,3 +39,4 @@ A few extra assets were used in the creation of this project.  A best effort att
 * [Skybox Volume 2 (Nebula)](https://www.assetstore.unity3d.com/en/#!/content/3392)
 * [Equipment for Industrial or Sci-Fi Building](https://www.assetstore.unity3d.com/en/#!/content/82846)
 * [Space Asteroids](https://www.assetstore.unity3d.com/en/#!/content/96444)
+* [iTween](https://www.assetstore.unity3d.com/en/#!/content/84)

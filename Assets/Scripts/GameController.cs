@@ -5,31 +5,37 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 	public GameObject[] lightsDanger;
 	public GameObject[] lightsNormal;
-	public GameObject doorEntry;
-	public GameObject doorLock;
 
-	public HudInteraction objHud;
+	//objects will be activated when in each state
+	public GameObject[] activatePuzzle1;
+	public GameObject[] activateFinish;
 
-	public float waypointDuration = 2.0f;
+	//public HudInteraction objHud;
+
+	public float moveSpeed = 1.0f;
+	public GameObject objPlayer;
 	public GameObject waypointSpawn;
 	public GameObject waypointPuzzle;
 	public GameObject waypointFinal;
 
 	public enum GameState { STATE_INVALID, STATE_STARTUP, STATE_PUZZLE1, STATE_COMPLETE }
 	private GameState gameState = GameState.STATE_INVALID;
-	private GameState gameAutoProgress = GameState.STATE_INVALID;
+	//private GameState gameAutoProgress = GameState.STATE_INVALID;
 
-	private Transform transformBegin = null;	//transform to move FROM
-	private Transform transformEnd = null;	//transform to move TO
-	private float transformProgress = 0;	//transform transition rate
+	private GameObject[] activatePrevious = null;
 
 	// Use this for initialization
 	void Start () {
+		//objPlayer.transform = waypointSpawn.transform;
 		SetGameState (GameState.STATE_STARTUP);
+		/*iTween.CameraFadeFrom(iTween.Hash
+			"amount", 0, "time", 2.0f
+		);*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		if (gameAutoProgress!=GameState.STATE_INVALID) {	//had an 'auto' progress state?
 			if (Input.GetMouseButtonDown (0)) {		//wait for click anywhere
 				GameState gameStateTemp = gameAutoProgress;
@@ -38,8 +44,9 @@ public class GameController : MonoBehaviour {
 				return;
 			}
 		}
-
+		*/
 		//reposition camera
+		/*
 		if (transformEnd && transformBegin) {
 			transformProgress += (Time.deltaTime / waypointDuration);
 			if (transformProgress > 1.0f) {
@@ -51,7 +58,7 @@ public class GameController : MonoBehaviour {
 				Camera.main.transform.parent.transform.rotation = 
 					Quaternion.Slerp (transformBegin.rotation, transformEnd.rotation, transformProgress);
 			}
-		}
+		}*/
 
 	}
 
@@ -78,32 +85,57 @@ public class GameController : MonoBehaviour {
 			return;
 		gameState = value;
 
-		transformEnd = null;
+		Transform transformEnd = null;
+		GameObject[] activateNew = null;
 		switch (gameState) {
 		default:
 		case GameState.STATE_INVALID:
 			return;
 		case GameState.STATE_STARTUP:
 			transformEnd = waypointSpawn.transform;
-			gameAutoProgress = GameState.STATE_PUZZLE1;
-			objHud.ActivateHUD ("Welcome to the Puzzle, version 1.");
+			//gameAutoProgress = GameState.STATE_PUZZLE1;
+			//objHud.ActivateHUD ("Welcome to the Puzzle, version 1.");
 			break;
 		case GameState.STATE_PUZZLE1:
 			transformEnd = waypointPuzzle.transform;
-			objHud.DeactivateHUD ();
+			activateNew = activatePuzzle1;
+			//objHud.DeactivateHUD ();
 			break;
 		case GameState.STATE_COMPLETE:
+			activateNew = activateFinish;
 			transformEnd = waypointFinal.transform;
 			break;
 		}
 		Debug.Log ("GameController: Entering new state: " + gameState);
 
-		//other logic to change game state
+		//deactivate previous set and activate new one
+		if (activatePrevious != null) {
+			foreach (GameObject obj in activatePrevious) {
+				if (obj) {
+					obj.SetActive (false);
+				}
+			}
+			activatePrevious = activateNew;
+		}
+		if (activateNew != null) {
+			foreach (GameObject obj in activateNew) {
+				if (obj) {
+					obj.SetActive (true);
+				}
+			}
+		}
+
 
 		//allow position and rotation to move...
 		if (transformEnd) {
-			transformBegin = Camera.main.transform.parent.transform;
-			transformProgress = 0.0f;
+			// Move the player to the play position.
+			iTween.MoveTo(objPlayer, 
+				iTween.Hash(
+					"position", transformEnd.position, 
+					"time", moveSpeed, 
+					"easetype", "linear"
+				)
+			);
 		}
 	}
 

@@ -15,7 +15,7 @@ public class LightUp_2_Final : MonoBehaviour
 	public Material lightUpMaterial;
 
 	// The gameobject that has the GameLogic.cs script attached.
-	public GameLogic gameLogic;
+	//public GameLogic gameLogic;
 
 
 	void Start()
@@ -30,7 +30,7 @@ public class LightUp_2_Final : MonoBehaviour
 	{
 		// Call the GameLogic.PlayerSelection(GameObject sphere) method (see GameLogic.cs script) passing in the orb 
 		// this script is attached to.
-		gameLogic.PlayerSelection(this.gameObject);
+		//gameLogic.PlayerSelection(this.gameObject);
 
 		// Get the GVR audio source component on this orb and play the audio.
 		this.GetComponent<GvrAudioSource>().Play();
