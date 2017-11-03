@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour {
 	public GameObject[] positionDoor = new GameObject[2];
 	public GameObject objShip;
 	public GameObject[] positionShip;
+	public GameObject objPuzzleHolder;
+	public GameObject prefabEffect;
 
 	//public HudInteraction objHud;
 
@@ -91,6 +93,7 @@ public class GameController : MonoBehaviour {
 		if (gameState == value)
 			return;
 		gameState = value;
+		float moveDelay = 0.0f;
 
 		GameObject objActive = null;
 		switch (gameState) {
@@ -104,6 +107,8 @@ public class GameController : MonoBehaviour {
 			waypointFinal.SetActive (false);
 			waypointPuzzle1.SetActive (false);
 			waypointSpawn.SetActive (true);
+			prefabEffect.SetActive (false);
+			objPuzzleHolder.SetActive (true);
 			ManipulateShip (false);
 			ManipulateDoor (false);
 			//gameAutoProgress = GameState.STATE_PUZZLE1;
@@ -114,6 +119,8 @@ public class GameController : MonoBehaviour {
 			waypointFinal.SetActive (false);
 			waypointSpawn.SetActive (false);
 			waypointPuzzle1.SetActive (true);
+			prefabEffect.SetActive (false);
+			objPuzzleHolder.SetActive (true);
 			ManipulateDoor (true);
 			//objHud.DeactivateHUD ();
 			break;
@@ -122,8 +129,12 @@ public class GameController : MonoBehaviour {
 			waypointPuzzle1.SetActive (false);
 			waypointSpawn.SetActive (false);
 			ManipulateShip (true);
+			objPuzzleHolder.SetActive (false);
+			prefabEffect.SetActive (true);
+			autoDisable = prefabEffect;
 			autoEnable = waypointFinal;
-			timeAutoAction = Time.time + 5f;
+			moveDelay = 1.0f;
+			timeAutoAction = moveDelay + Time.time + 5f;
 			break;
 		}
 		Debug.Log ("GameController: Entering new state: " + gameState);
@@ -134,7 +145,7 @@ public class GameController : MonoBehaviour {
 			iTween.MoveTo(objPlayer, 
 				iTween.Hash(
 					"position", objActive.transform.position, 
-					"time", moveSpeed, 
+					"time", moveSpeed, "delay", moveDelay,
 					"easetype", "linear"
 				)
 			);

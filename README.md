@@ -44,6 +44,6 @@ A few extra assets were used in the creation of this project.  A best effort att
 * [Equipment for Industrial or Sci-Fi Building](https://www.assetstore.unity3d.com/en/#!/content/82846)
 * [Space Asteroids](https://www.assetstore.unity3d.com/en/#!/content/96444)
 * [iTween](https://www.assetstore.unity3d.com/en/#!/content/84)
-* visual assets - [HUD display](https://disastranagant.deviantart.com/art/Delta-Plus-HUD-272423043), [robot font](http://www.dailyfreefonts.com/fonts/info/38-DS-Digital.html)
+* visual assets - [HUD display](https://disastranagant.deviantart.com/art/Delta-Plus-HUD-272423043), [robot font](http://www.dailyfreefonts.com/fonts/info/38-DS-Digital.html), 
 * various space audio - [door close](http://soundbible.com/1288-Chamber-Decompressing.html), [breathing](http://soundbible.com/143-Astronaut-Breathing.html), [power-up](http://soundbible.com/1636-Power-Up-Ray.html)
 * various ambient audio tracks - [game start](https://soundcloud.com/astropilot/space-ambient-demo-00), [within puzzle](https://soundcloud.com/time-space/alteredreality-demo2), [puzzle solution](https://soundcloud.com/brillbilly/lost-in-space-ambient)
