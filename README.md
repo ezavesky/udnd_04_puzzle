@@ -26,6 +26,7 @@ Struggles:
 * **GVR setup** - Initializing a GVR scene was solved with [forum help](https://discussions.udacity.com/t/reticle-is-not-showing/203621/27)
 * **World/local coordinate normalization** - Working with intermediate objects like spheres and planes (instead of pre-created meshes) meant that the objects could be transformed within the editor.  However, this results in odd values for the rotation, scale, etc. of the object and makes nesting its children (in the editor hierarchy) more challenging.  In the end, I used lots of empty place holders for objects.
 * **iTween** - A number of great demos for iTween manipulation can be found on [this wiki page](https://unionassets.com/blog/basic-animation-itween-259).
+* **Flickering Lights** - In original game design, I wanted to include multiple stages of the game, including one where internal lights were flickering.  After reviewing some of the *don't do* options for motion sickness, I backed off of this strategy.
 
 ## Requirements
 Software and build environment requirements.

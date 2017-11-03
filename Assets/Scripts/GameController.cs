@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
 	private GameObject autoEnable = null;
 
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
 		//disable all the waypoints because they contain other objects
 		waypointSpawn.SetActive(false);
 		waypointPuzzle1.SetActive (false);
@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected void Update () {
 		if (timeAutoAction > 0.0f && Time.time>timeAutoAction) {
 			if (autoDisable) {
 				autoDisable.SetActive (false);
