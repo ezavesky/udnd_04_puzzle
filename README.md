@@ -2,8 +2,8 @@
 udnd Puzzler for project 4 in Udacity VR course - September 2017
 ![Puzzler Overview](docs/screen_fullview.jpg)
 
-## Documentation
-Documentation is included in the [docs](docs) folder.
+## Design Documentation
+Looking for design documentation? Look no further than the [docs](docs) folder!
 
 ## Project Contents
 Quick description of contents within this repo.

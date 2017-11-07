@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	public GameObject objDoor;
 	public GameObject[] positionDoor = new GameObject[2];
 	public GameObject objShip;
+	public GameObject objShipTrail;
 	public GameObject[] positionShip;
 	public GameObject objPuzzleHolder;
 	public GameObject prefabEffect;
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour {
 		waypointSpawn.SetActive(false);
 		waypointPuzzle1.SetActive (false);
 		waypointFinal.SetActive (false);
+		objShipTrail.SetActive (false);
 
 		//force start at the beginning
 		objPlayer.transform.position = waypointSpawn.transform.position;
@@ -163,6 +165,7 @@ public class GameController : MonoBehaviour {
 		positionShip [0].SetActive (!activate);
 		if (activate) { 
 			rs.ToggleRotate (false);
+			objShipTrail.SetActive (true);
 			positionShip [1].SetActive (true);
 			iTween.MoveTo (objShip, 
 				iTween.Hash (
@@ -183,6 +186,7 @@ public class GameController : MonoBehaviour {
 			}
 		}
 		else {
+			objShipTrail.SetActive (false);
 			objShip.transform.position = positionShip [0].transform.position;
 			for (int i = 0; i < positionShip.Length; i++) {
 				positionShip [i].SetActive (false);
