@@ -60,6 +60,8 @@ public class LightUp : MonoBehaviour
 	{
 		// Assign the lightup material to the orb.
 		Light(LIGHT_STATE.STATE_ACTIVE);
+		// Get the GVR audio source component on this orb and play the audio.
+		this.GetComponent<GvrAudioSource>().Play();
 	}
 
 	public void AestheticError(float duration)
