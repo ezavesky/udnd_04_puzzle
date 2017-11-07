@@ -9624,6 +9624,7 @@ MonoBehaviour:
   - {fileID: 1584110681}
   - {fileID: 392477645}
   objShip: {fileID: 1747717733}
+  objShipTrail: {fileID: 1951467357}
   positionShip:
   - {fileID: 1166468936}
   - {fileID: 389535820}
