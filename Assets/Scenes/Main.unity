@@ -3842,8 +3842,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Asteroids disabled communications with an exploration mission.  \nYour
-    job is to reset the communication and navigation systems. "
+  m_Text: "Asteroids disabled communications with an exploration mission.  \nInteract
+    with the sonic control cylinders to reset the communication and navigation systems. "
 --- !u!222 &707029261
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5866,7 +5866,7 @@ MonoBehaviour:
   directivitySharpness: 1
   listenerDirectivityAlpha: 0
   listenerDirectivitySharpness: 1
-  gainDb: 0
+  gainDb: 4
   occlusionEnabled: 0
   playOnAwake: 0
   sourceClip: {fileID: 8300000, guid: b0994da96a08542898be7f637e641d1f, type: 3}

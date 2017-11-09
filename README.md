@@ -1,12 +1,14 @@
 # udnd_04_puzzle
-udnd Puzzler for project 4 in Udacity VR course - September 2017
-![Puzzler Overview](docs/screen_fullview.jpg)
 
 ## Design Documentation
 Looking for design documentation? Look no further than the [docs](docs) folder!
 
+## Screenshot overview
+udnd Puzzler for project 4 in Udacity VR course - September 2017
+
 ## Project Contents
 Quick description of contents within this repo.
+![Puzzler Overview](docs/screen_fullview.jpg)
 
 * Assets - assets including GoogleVR SDK clips for project
 * ProjectSettings - project settings for builds

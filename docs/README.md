@@ -22,20 +22,20 @@ to complete and must pass the "kid" test for both retaining attention and comple
 This game is focused on beginners to VR for interaction and mechanics complexity, but it should also contain a light mix of challenge.  Putting the question of mass adoption aside, an initial user base is aimed at younger children or early-VR adults that are looking to get some exposure to a few puzzles in a non-nausea educing fashion.
 
 ### Jane
-* Occupation: Stay at home parent
+* Occupation: Stay at home parent, [pexels.com image source](https://www.pexels.com/photo/boy-child-childhood-happiness-235554/)
 * Age: mid 30's
 * Quote: "I enjoy exploring new things and exposing my children to things that will better prepare them for the future"
 * Description: Jame has an advanced degree in the humanities and has been a stay-at-home parent for about 6 years.  She's not an avid participant in social media but enjoys time with friends and participating in project creation with her two daughters.  While she's never been one to be near the bleeding edge of technology, she will try almost anything (like VR) with a nudge from an online article.
 * Experience with VR: Very little, prior lengthy experiences caused mild nausea
-* [pexels.com source](https://www.pexels.com/photo/boy-child-childhood-happiness-235554/) ![example photo](photos/photo_jane.jpg)
+* ![example photo](photos/photo_jane.jpg)
 
 ### Marshall
-* Occupation: Child
+* Occupation: Child, [pexels.com image source](https://www.pexels.com/photo/boy-child-clouds-kid-346796/)
 * Age: 6
 * Quote: "I want to be an superhero when I grow up."
 * Description: Marshall is a six-year old boy (Jane's son), who enjoys crafts, reads for at least two hours a day, and has a growing appreciation for graphic novels.  He only gets an hour of screen time a day, but he chooses how to use it well, from math-based games to YouTube videos about origami.
 * Experience with VR: Little, only via mobile games
-* [pexels.com source](https://www.pexels.com/photo/boy-child-clouds-kid-346796/) ![example photo](photos/photo_marshall.jpg)
+* ![example photo](photos/photo_marshall.jpg)
 
 ### Jill
 * Occupation: Network Engineer
@@ -43,8 +43,8 @@ This game is focused on beginners to VR for interaction and mechanics complexity
 * Quote: "I enjoyed updating my skills and am eager to show how automation can help!"
 * Description: Jill is in her mid to late career but hopes to reboot her career in the world of machine learning and automation after taking a MOOC course about machine learning.  Over a period of two years, she took three courses after-work to complete a masters degree through distance learning.  She's done the work, followed the lessons, and is eager to immediately apply what she learned to her real job -- and reap the rewards for doing so.
 * Experience with VR: None
-* [link to this quiz post](https://discussions.udacity.com/t/quiz-responses-create-a-persona-for-puzzler/203143/220?u=robotvisiondr)
-* [pexels.com source](https://www.pexels.com/photo/adult-brainstorming-business-career-440588/)![example photo](photos/photo_jill.jpg)
+* [link to this quiz post](https://discussions.udacity.com/t/quiz-responses-create-a-persona-for-puzzler/203143/220?u=robotvisiondr), [pexels.com source](https://www.pexels.com/photo/adult-brainstorming-business-career-440588/)
+* ![example photo](photos/photo_jill.jpg)
 
 # Creating the Puzzler
 This section includes discussion and initial sketches for the proposed game with a mix of graphics from online sites and assets from the game as it was developed.
@@ -72,61 +72,54 @@ This section walks through proposed interactions of the game.
   * ![game three, combo](sketches/sketch.004.jpeg)
 
 ### Dialogs
-Different combo box styles were evaluated with different button colors and positions on screen.  Ultimately, style 6 was chosen because of the contrast of the button but coherence with the blue visuals from the HUD graphic and the general skybox blue hues.
+Different combo box styles were evaluated with different button colors and positions on screen.  Ultimately, style 6 was chosen because of the contrast of the button but coherence with the blue visuals from the HUD graphic and the general skybox blue hues.  Originals for each style
+are kept in the [dialog sketches](sketches/dialogs) directory.
 
-* ![style 1](sketches/sketch.005.jpeg)
-* ![style 2](sketches/sketch.006.jpeg)
-* ![style 3](sketches/sketch.007.jpeg)
-* ![style 4](sketches/sketch.008.jpeg)
-* ![style 5](sketches/sketch.009.jpeg)
-* ![style 6](sketches/sketch.010.jpeg)
+* ![style montage](sketches/sketch_dialog_montage.jpg)
 
 # User testing
 ## Initial Usability
 These questions were prompted to the first test subject.  After experimentation and observations, a few insights were produced.
-
-* What do you see?
-* How do you interact with the system?
-* How does the size of objects feel?
-* How does it feel navigating?
-* Do you understand controls?
-
-Suggestions from this session were the following:
-
-* Some grammatical errors in the panel discussions
-* Hide the final success panel until the ship animation is completed
-* Slow movement to the final area
-* Some graphical errors in this testing session
-* Modulate the sounds of the environment (perhaps a little louder)
-* Switch fade transition from white to black
-
-* Video of the experience: ![Initial Usability Test](https://youtu.be/2IQXMSOVOAk)
+* Initial quesitions:
+  * What do you see?
+  * How do you interact with the system?
+  * How does the size of objects feel?
+  * How does it feel navigating?
+  * Do you understand controls?
+* Observations from this session were the following:
+  * Some grammatical errors in the panel discussions
+  * Hide the final success panel until the ship animation is completed
+  * Slow movement to the final area
+  * Some graphical errors in this testing session
+  * Modulate the sounds of the environment (perhaps a little louder)
+  * Switch fade transition from white to black
+* Video of the experience...
+  * [![Initial Usability Test](http://img.youtube.com/vi/2IQXMSOVOAk/0.jpg)](https://youtu.be/2IQXMSOVOAk)
 
 ## Final Usability
 These questions were prompted to the first test subject upon game near completion.
 
-* Are the instructions clear on the panels?
-* Is the movement slow and smooth enough for you?
-* Do you see any graphical or other unusual errors for the experience?
-* Was the game long enough and/or satisfying to play?
-* Could you do everything you needed to while sitting in a chair?
-* If you could add one or more additional features for the game, what would they be?
-
-Suggestions from this this session were the following:
-
-* Instructions were mostly clear except that the random generator created a confusing pattern.
-* Movement speed was okay after changing approach speed.
-* No graphical errors were detected or observed, mild compliments on the content in the scene.
-* Yes, game was long enough with the caveat that the instructions weren't as clear.
-* No additional movement was required for playing the game from within a chair.
-* No additional features, except for the clearer instructions.  Could possible pointer or change it to indicator that computer is acting.
-
-* Video of the experience: ![Final Usability Test](https://youtu.be/FOGhaQwIzgU)
+* Initial questions:
+  * Are the instructions clear on the panels?
+  * Is the movement slow and smooth enough for you?
+  * Do you see any graphical or other unusual errors for the experience?
+  * Was the game long enough and/or satisfying to play?
+  * Could you do everything you needed to while sitting in a chair?
+  * If you could add one or more additional features for the game, what would they be?
+* Suggestions from this this session were the following:
+  * Instructions were mostly clear except that the random generator created a confusing pattern.
+  * Movement speed was okay after changing approach speed.
+  * No graphical errors were detected or observed, mild compliments on the content in the scene.
+  * Yes, game was long enough with the caveat that the instructions weren't as clear.
+  * No additional movement was required for playing the game from within a chair.
+  * No additional features, except for the clearer instructions.  Could possible pointer or change it to indicator that computer is acting.
+* Video of the experience:
+  * [![Final Usability Test](http://img.youtube.com/vi/FOGhaQwIzgU/0.jpg)](https://youtu.be/FOGhaQwIzgU)
 
 # Final Walkthrough
 
-* Video of the experience: ![Final Application Review](https://youtu.be/2OznWkiWxp0)
-
+* Video of the experience:
+  * [![Final Application Review](http://img.youtube.com/vi/2OznWkiWxp0/0.jpg)](https://youtu.be/2OznWkiWxp0)
 * introduction screen - Main visibility of the intro panel and the skybox, behind the
   immediate view is the enclosed puzzle area, which is positioned on a stationary asteriod
   and a space ship that is adrift to the right of the asteroid.  A nebulous and
@@ -148,7 +141,7 @@ Suggestions from this this session were the following:
   The second image here illustrates early testing (which was not kept) with a light
   flickering operation.
   * ![computer in puzzle room](screens/screen_04_envcomputer.jpg)
-  * ![initial error visuals](screen_04_envcomputer_error.jpg)
+  * ![initial error visuals](screens/screen_04_envcomputer_error.jpg)
 * barrels in puzzle room - Additional details within the puzzle room are a few barrel
   objects to the front left. These barells are static in color and position, but they
   were created to go along with the space equiptment motif.
@@ -183,4 +176,12 @@ Suggestions from this this session were the following:
   * ![game completion dialog](screens/screen_11_success.jpg)
 
 # Conclusion
-TBD
+The creation of this Puzzler app was fun and an informative way to explore a
+design-oriented process for application creation and development.  By completing the
+process, lessons on initial persona identification and tight user testing were
+valuable and ultimately reduced the time to completion of the project by validating
+proper development scope.
+
+These lessons will be utilized in future game and project designs because they still
+permit the addition of experimental techniques and learning but do so in a controlled
+and ultimately _useful for the user_ fashion.
