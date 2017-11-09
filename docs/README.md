@@ -4,12 +4,12 @@ Puzzler is a mobile VR application for new VR users which challenges them to sol
 
 ### Table of Contents
 1. [Introduction to the application](#Introduction)
-  1. [Personas](#Personas)
+   1. [Personas](#Personas)
 2. [Creating the Puzzler](#Creating-the-Puzzler)
-  1. [Background](#Background)
-  2. [Interactions](#Interactions)
-    1. [Gameplay](#Gameplay)
-    2. [Dialogs](#Dialogs)
+   1. [Background](#Background)
+   2. [Interactions](#Interactions)
+      1. [Gameplay](#Gameplay)
+      2. [Dialogs](#Dialogs)
 3. [User testing for project status](#User-testing)
 4. [Final walkthrough](#Final-Walkthrough)
 5. [Conclusion](#Conclusion)
@@ -56,7 +56,7 @@ This section includes discussion and initial sketches for the proposed game with
 * Triggers: Various objects in space (within frontal viewing area) will begin to respond and take off
 * Assets: All assets here are collected from free resources on Unity store
 * [link to this quiz post](https://discussions.udacity.com/t/quiz-responses-sketch-and-post-on-the-forum/203148/182?u=robotvisiondr)
-![puzzler sketch](sketches/sketch.001.jpeg)
+* ![puzzler sketch](sketches/sketch.001.jpeg)
 
 ## Interactions
 This section walks through proposed interactions of the game.
