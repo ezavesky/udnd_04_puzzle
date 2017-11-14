@@ -3,16 +3,16 @@ Statement of Purpose
 Puzzler is a mobile VR application for new VR users which challenges them to solve a familiar type of puzzle in a new way.
 
 ### Table of Contents
-1. [Introduction to the application](#Introduction)
-   1. [Personas](#Personas)
-2. [Creating the Puzzler](#Creating-the-Puzzler)
-   1. [Background](#Background)
-   2. [Interactions](#Interactions)
-      1. [Gameplay](#Gameplay)
-      2. [Dialogs](#Dialogs)
-3. [User testing for project status](#User-testing)
-4. [Final walkthrough](#Final-Walkthrough)
-5. [Conclusion](#Conclusion)
+1. [Introduction to the application](#introduction)
+   1. [Personas](#personas)
+2. [Creating the Puzzler](#creating-the-puzzler)
+   1. [Background](#background)
+   2. [Interactions](#interactions)
+      1. [Gameplay](#gameplay)
+      2. [Dialogs](#dialogs)
+3. [User testing for project status](#user-testing)
+4. [Final walkthrough](#final-walkthrough)
+5. [Conclusion](#conclusion)
 
 # Introduction
 This puzzle game will be focused on a space theme with a small mix of logic games.  Adhering to suggestions about focus zones, the game will place most active objects directly in front of (or immediately to the side of) the user's primary view.  Each puzzle should require only a few seconds
