@@ -94,7 +94,7 @@ These questions were prompted to the first test subject.  After experimentation 
   * Modulate the sounds of the environment (perhaps a little louder)
   * Switch fade transition from white to black
 * Video of the experience...
-  * [![Initial Usability Test](http://img.youtube.com/vi/2IQXMSOVOAk/0.jpg)](https://youtu.be/2IQXMSOVOAk)
+  * [![Initial Usability Test](http://img.youtube.com/vi/__tmYUN1nug/0.jpg)](https://youtu.be/__tmYUN1nug)
 
 ## Final Usability
 These questions were prompted to the first test subject upon game near completion.
@@ -114,12 +114,12 @@ These questions were prompted to the first test subject upon game near completio
   * No additional movement was required for playing the game from within a chair.
   * No additional features, except for the clearer instructions.  Could possible pointer or change it to indicator that computer is acting.
 * Video of the experience:
-  * [![Final Usability Test](http://img.youtube.com/vi/FOGhaQwIzgU/0.jpg)](https://youtu.be/FOGhaQwIzgU)
+  * [![Final Usability Test](http://img.youtube.com/vi/nG8gPnf7d9U/0.jpg)](https://youtu.be/nG8gPnf7d9U)
 
 # Final Walkthrough
 
 * Video of the experience:
-  * [![Final Application Review](http://img.youtube.com/vi/2OznWkiWxp0/0.jpg)](https://youtu.be/2OznWkiWxp0)
+  * [![Final Application Walkthrough](http://img.youtube.com/vi/6oVViRUTRTk/0.jpg)](https://youtu.be/6oVViRUTRTk)
 * introduction screen - Main visibility of the intro panel and the skybox, behind the
   immediate view is the enclosed puzzle area, which is positioned on a stationary asteriod
   and a space ship that is adrift to the right of the asteroid.  A nebulous and
